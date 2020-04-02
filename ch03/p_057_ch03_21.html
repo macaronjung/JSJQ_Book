@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function inputFun() {
+      var x = document.getElementById("input_id").value;
+      document.getElementById("output_id").value=x;
+    }
+  </script>
+  입력 : <input type="text" id="input_id" size="10">
+  결과 : <input type="text" id="output_id" size="10">
+  <button onclick="inputFun">클릭</button>
+</body>
+</html>
