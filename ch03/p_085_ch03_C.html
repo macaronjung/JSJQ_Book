@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var a, cunt = 0, calc, num, temp;
+    function calc_b() {
+      calc = Math.random() * 100;
+      num = parseInt(calc);
+    }
+    function calc_c() {
+      temp = document.getElementById("x").value;
+      a = parseInt(temp);
+      if(a > num)
+        document.getElementById("result").value = "입력값이 커";
+        else if(a < num)
+        document.getElementById("result").value = "입력값이 작아";
+        else {
+          document.getElementById("result").value = "값이 정확해";
+        }
+        cunt += 1;
+        document.getElementById("calc").value = cunt;
+    }
+  </script>
+</head>
+<body>
+  <h2>숫자 맞추기</h2>
+  숫자 입력 : <input id="x" />
+  입력 결과 : <input id="result" /><br />
+  반복 횟수 : <input id="calc" /><br />
+
+  <input type="button" value="숫자지정" onclick="calc_b()" />
+  <input type="button" value="찾기" onclick="calc_c()" />
+</body>
+</html>

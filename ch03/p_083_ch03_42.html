@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //case('-'): ;가 아닌거 조심
+    var grade = prompt("점수에 따른 학점입니다(0~100)", (""));
+    switch(grade) {
+      case('100'):
+        document.write('A' + "<br>");
+        break;
+        case('50'):
+        document.write('B' + "<br>");
+        break;
+        default:
+        document.write('C' + "<br>");
+        break;
+    }
+  </script>
+</body>
+</html>
