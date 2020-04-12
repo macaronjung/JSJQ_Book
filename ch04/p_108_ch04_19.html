@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- JS는 매개변수에 대한 데이터 유형을 지정하지 않음 -->
+  <!-- 인수보다 매개변수의 개수가 많으면 초과된 매개변수는 undefined 로 지정됨 -->
+  <script>
+    function print(x, y) {
+      document.write(x+"가"+y+"개 있어"+"<br>");
+    }
+  </script>
+</head>
+
+<body>
+  <script>
+    print('apple',10); //인자의 수와 매개변수의 수가 일치
+    print('apple'); //인자의 수가 매개변수의 수보다 작음(매개변수 y에 값이 할당되지 않음)
+    print('apple','many',500,'mango'); //인자의 수가 매개변수의 수보다 많음(인수 '500','mango'는 무시됨)
+  </script>
+</body>
+</html>

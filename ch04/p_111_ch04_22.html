@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 매개변수 정의 안되있음
+    function print() {
+      // argumenmts 객체 이용 처음 인수(멜론)는 인덱스 0인 곳에
+      // 두번째 인수(10)은 인덱스 1인 곳에 할당
+      document.write(arguments[0]+"가"+arguments[1]+"개 있어"+"<br>");
+    }
+  </script>
+</head>
+
+<body>
+  <script>
+    print("melon",10);
+  </script>
+</body>
+</html>

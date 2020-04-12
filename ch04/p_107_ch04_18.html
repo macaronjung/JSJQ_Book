@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 호출문이 함수에게 전달하는 값 -> 인수 -->
+  <!-- 함수가 그 값을 받는 변수 -> 매개변수 -->
+  <p id="demo2"></p>
+  <script>
+    function findMax() {
+      var i;
+      // Infinity -> JS에서 표현할 수 있는 양의 수를 넘는 무한대를 나타내는 값
+      // 또는 어떤 수를 0으로 나누었을때 나오는 값
+      var max = -Infinity;
+      // arguments 객체는 모든 함수 내에서 이용 가능한 지역 변수
+      // arguments 객체를 사용하여 함수 내에서 모든 인수를 참조할 수 있음
+      for (i=0; i<arguments.length; i++) {
+        if (arguments[i] > max) {
+          max = arguments[i];
+        } /* if */
+      } /* for */
+      return max;
+    }
+    function sumAll() {
+      var i, sum = 0;
+      for (i=0; i<arguments.length; i++) {
+        sum += arguments[i];
+      }
+    }
+
+  </script>
+</body>
+</html>

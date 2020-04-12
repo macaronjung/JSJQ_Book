@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- 함수는 헤드단에 작성 -->
+  <script>
+    var view = function add(x, y) {
+      var sum;
+      sum = x + y;
+      // return -> 반환 값 계산시 실행 순서가 호출자에게 이동되고
+      // 값도 호출자에게 반환됨
+      return sum;
+    }
+  </script>
+</head>
+<body>
+  <!-- 실행문은 바디단에 작성 -->
+  <script>
+    var result = view(100, 200);
+    document.write("함수 add()가 반환한 값" + result);
+  </script>
+</body>
+</html>
