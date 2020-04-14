@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    function square(x,y) {
+      var sum;
+      sum = (x*y)/2;
+      return sum;
+    }
+    function display(a,b) {
+      document.write("삼각형의 면적 : " + square(a,b));
+    }
+  </script>
+</head>
+<body>
+  <!-- 함수 안에서 외부 함수 호출 -->
+  <script>
+    display(100,200);
+  </script>
+</body>
+</html>

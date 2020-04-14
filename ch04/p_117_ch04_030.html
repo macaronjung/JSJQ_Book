@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    function area(x,y) { //area 전역함수 선언
+      var calculate = function(a, b) { //calculate 지역함수 선언
+        sum = (x*y)/2;
+        return sum;
+      }
+      var result = calculate(x, y);
+      document.write("삼각형의 면적 : " + result);
+    }
+  </script>
+</head>
+<body>
+  <!-- 함수 안에서 내부 함수 호출 -->
+  <script>
+    area(100,200);
+    // 이미 함수 area 내에 선언된 함수(지역함수) 이므로 결과 값 출력 불가능
+    document.write("삼각형의 면적 : " + calculate(x,y));
+  </script>
+</body>
+</html>
