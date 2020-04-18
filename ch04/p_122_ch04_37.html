@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+    <!-- 인수로 숫자형 문자를 정수나 실수로 변경(숫자+문자 -> 숫자만 변경) -->
+    <script>
+      var numericStr01 = "12";
+      var numericStr02 = "12.34";
+      var numericStr03 = "12$34";
+      var numericStr04 = "12.34e2";
+      var numericStr05 = "0x12";
+
+      document.write("result_parseInt : " + parseInt(numericStr01) + "<br>");
+      document.write("result_parseInt : " + parseInt(numericStr02) + "<br>");
+      document.write("result_parseInt : " + parseInt(numericStr03) + "<br>");
+      document.write("result_parseInt : " + parseInt(numericStr04) + "<br>");
+      document.write("result_parseInt : " + parseInt(numericStr05) + "<br>");
+
+      document.write("result_parseFloat : " + parseFloat(numericStr01) + "<br>");
+      document.write("result_parseFloat : " + parseFloat(numericStr02) + "<br>");
+      document.write("result_parseFloat : " + parseFloat(numericStr03) + "<br>");
+      document.write("result_parseFloat : " + parseFloat(numericStr04) + "<br>");
+      document.write("result_parseFloat : " + parseFloat(numericStr05) + "<br>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>
