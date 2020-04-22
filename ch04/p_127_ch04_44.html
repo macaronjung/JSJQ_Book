@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- call() Method 
+  소유자 객체를 첫 번째 인수(매개변수)로 사용하여 함수를 호출하는데 사용 가능 
+  다른 객체에 속한 메소드 사용 가능 -->
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <script>
+    var person = {
+      firstName: "John",
+      lastName: "Goodman",
+      fullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+    }
+
+    var myObject = {
+      firstName: "Mary",
+      lastName: "Lockman"
+    }
+    x = person.fullName(myObject);
+    document.getElementById("demo1").innerHTML = x;
+    // call 메소드 때문에 myObject의 값이 적용됨
+    y = person.fullName.call(myObject);
+    document.getElementById("demo2").innerHTML = y;
+  </script>
+</body>
+</html>
