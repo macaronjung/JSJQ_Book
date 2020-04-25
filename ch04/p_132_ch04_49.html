@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  
+</head>
+<body>
+  
+  <button type="button" onclick="myFunction()">
+    Count!!!</button>
+    <p id="count">0</p>
+
+    <script>
+    var counter = 0;
+
+    function add() {
+      return counter += 1;
+    }
+
+    function myFunction() {
+      document.getElementById("count").innerHTML = add();
+    }
+  </script>
+
+  <!-- 전역 변수는 클로저를 사용하여
+  로컬로 만들 수 있음 -->
+</body>
+</html>
