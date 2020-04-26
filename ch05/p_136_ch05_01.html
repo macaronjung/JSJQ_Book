@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- 객체 지향 언어 -->
+  <!-- 객체가 변수처럼 선언됨
+  객체의 메소드 호출 -> 객체명.메소드명() -->
+  <script>
+    // objectExam 객체는 속성2개와 1개의 메소드로 구성
+    var objectExam = {
+      //속성
+      name : "macaron",
+      age : 20,
+
+      //메소드
+      sayHello : function(blogname) {
+        alert(this.name + " " + blogname);
+      }
+    };
+
+    objectExam.sayHello("정보 보기");
+    document.write("name : " + objectExam.name + " ");
+    document.write("age : " + objectExam.age);
+  </script>
+</head>
+<body>
+  <!-- 실제 생활에 존재하는 모든 사물은 하나의 객체에 해당 -->
+  <!-- 각 객체는 고유의 특성 값을 가지고 고유한 행동을 함 -->
+  <!-- 자동차 : 제조사,색상,배기량등 고유 데이터 -> 속성 
+                출발,정지등 행동 -> 메소드 -->
+
+  <!-- 메소드 : 객체가 가지고 있는 동작 -->
+  <!-- 함수가 어떤 객체의 동작을 나타내는 함수로 정의될 때 
+      그 함수를 그 객체의 메소드라고 함 -->
+</body>
+</html>
