@@ -15,13 +15,14 @@
       name : "macaron",
       age : 20,
 
-      //메소드
+      //메소드 -> 객체명.메소드명() : 객체에 속한 메소드 호출
       sayHello : function(blogname) {
         alert(this.name + " " + blogname);
       }
     };
 
     objectExam.sayHello("정보 보기");
+    //객체명.속성 : 객체에 속한 속성 값 활용
     document.write("name : " + objectExam.name + " ");
     document.write("age : " + objectExam.age);
   </script>
@@ -32,7 +33,9 @@
   <!-- 자동차 : 제조사,색상,배기량등 고유 데이터 -> 속성 
                 출발,정지등 행동 -> 메소드 -->
 
-  <!-- 메소드 : 객체가 가지고 있는 동작 -->
+  <!-- 속성(property) : 객체를 특정 지워주는 값 
+        마치 변수에 값을 할당하는 것과 유사(객체에 소속된 변수라고 생각) -->
+  <!-- 메소드 : 객체가 가지고 있는 동작(취하는 행동) -->
   <!-- 함수가 어떤 객체의 동작을 나타내는 함수로 정의될 때 
       그 함수를 그 객체의 메소드라고 함 -->
 </body>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- new Object() 와 함수를 이용한 객체 정의 -->
+
+  <!-- var 객체 이름 = new Object() {
+    객체.속성 : 속성 값,
+    .....
+    객체.메소드 =: function() {...함수...}
+  }; -->
+
+  <script>
+    var myCar = new Object();
+    myCar.type = "BMW M5";
+    myCar.color = "blue";
+    myCar.speed = 100;
+
+    myCar.break = function() {
+      this.speed -= 10;
+      return this.speed;
+    };
+
+    myCar.accel = function() {
+      this.speed += 10;
+      return this.speed;
+    };
+
+    document.write("이름 : " + myCar.type + "<br />");
+    document.write("색상 : " + myCar.color + "<br />");
+    //myCar.accel() 호출시 뒤에 () 잊지 말기!!! -> 메소드 호출
+    document.write("속력 : " + myCar.accel() + "<br />");
+    document.write("차량 감속 : " + myCar.break() + "<br />");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
