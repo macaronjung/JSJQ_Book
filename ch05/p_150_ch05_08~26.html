@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- 내장 객체 -->
+  <!-- Array -->
+</head>
+<body>
+
+  <script>
+    // join() -> 구분자를 인수로 제공(배열 요소의 값들을 구분하여 하나의 문자열로 연결)
+    let fruits = ["apple", "mango", "banana", "pear"];
+    let eat = fruits.join(" and ");
+    document.write(`eat : ${eat} <br />`);
+    
+    // push() -> 배열 끝에 하나 이상의 요소를 추가, 추가된 요소를 포함한 배열의 크기를 할당
+    // pop() -> 배열 끝 요소를 제거 또는 호출
+    // 배열의 끝에 적용 됨
+    let addDelete = ["first", 100, "third", "true"];
+    let popLet = addDelete.pop();
+    document.write(`popLet : ${popLet} <br />`);
+    document.write(`addDelete : ${addDelete} <br />`);
+
+    let pushLet = addDelete.push(false, "another");
+    document.write(`pushLet : ${pushLet} <br />`);
+    document.write(`addDelete : ${addDelete} <br />`);
+
+    // indexOf() -> 배열 요소 값을 가지고 배열의 인덱스를 검색
+    let fruits2 = ["apple", "mango", "banana", "pear"];
+    document.write(`fruits2 : ${fruits2.indexOf("banana")} <br />`);
+    document.write(`fruits2 : ${fruits2.indexOf("none")} <br />`); // 해당 값이 없으면 -1 출력
+
+    // shift() -> 배열을 좌측으로 1개의 요소만큼 이동 -> 맨 좌측의 요소가 배열 밖으로 나가 배열 크기가 줄어듬
+    // unshift() -> 배열의 맨 처음에 요소를 추가하여 배열 크기 조절
+    // 배열의 처음에 적용 됨
+    let fruits3 = ["apple", "mango", "banana", "pear"];
+    fruits3.unshift("mango");
+    document.write(`fruits3 : ${fruits3} <br />`);
+    fruits3.shift();
+    document.write(`fruits3 : ${fruits3} <br />`);
+
+    // splice() -> 주어진 값의 위치부터 시작하여 정의된 수만큼 배열 요소를 삭제,추가 실행(-> 교체)
+    let fruits4 = ["apple", "mango", "banana", "pear"];
+    // 시작 인덱스, 삭제 인덱스
+    fruits4.splice(1, 1, "lemon", "berry");
+    document.write(`fruits4 : ${fruits4} <br />`);
+
+    // slice() -> 배열의 일부를 잘라내어 새로운 배열을 생성(기존 배열 유지)
+    let fruits5 = ["apple", "mango", "banana", "pear"];
+    // 시작 인덱스, 종료 인덱스
+    document.write(`fruits5 : ${fruits5.slice(1, 3)} <br />`);
+
+    // sort -> 배열의 모든 요소의 값을 문자로 변경 후 사전적으로 정렬(오름차순)
+    let fruits6 = ["apple", "mango", "banana", "pear"];
+    document.write(`fruits6 : ${fruits6.sort()} <br />`);
+  </script>
+
+  <!-- 최대,최소 순서로 정렬하는 sort -->
+  <p>최대값 : <span id="demo1"></span></p>
+  <p>최소값 : <span id="demo2"></span></p>
+  <script>
+    let points = [40, 100, 1, 5, 25, 10];
+    // 배열 오름차순으로 정렬
+    points.sort(function(a, b) {
+      return a - b;
+    });
+    // 배열 마지막 인덱스를 찾아 요소 값 출력 -> 최대값
+    document.getElementById("demo1").innerHTML = points[points.length - 1];
+    document.getElementById("demo2").innerHTML = points[0];
+  </script>
+
+  <script>
+
+    // reverse() -> 내림차순 정렬
+    let fruits7 = ["apple", "mango", "banana", "pear"];
+    document.write(`fruits7 : ${fruits7.reverse()} <br />`);
+  </script>
+</body>
+</html>
