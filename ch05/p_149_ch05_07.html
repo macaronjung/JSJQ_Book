@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+  
+  <!-- 객체에 적용하는 for... in 
+        for(let 변수 in 객체명) { 반복문} -->
+  <script>
+    function Car(model, speed, color) {
+      this.model = model;
+      this.speed = speed;
+      this.color = color;
+      
+      this.break = function () {
+        this.speed -= 10;
+      };
+      this.accel = function () {
+        this.speed += 10;
+      }
+
+    }
+
+    myCar = new Car("BMW", 100, "White");
+    // 속성과 메소드가 기술되는 순서에 따라 i 값으로 할당됨
+    for(let i in myCar) {
+      document.write(`${i} : ${myCar[i]} <br />`);
+    }
+    delete myCar.color;
+    document.write(`내 차의 색상 : ${myCar.color}`);
+  </script>
+</body>
+</html>

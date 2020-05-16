@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+  
+  <!-- this 호출 -> JS 코드를 소유하는 객체를 의미 
+        함수에서 사용되는 this의 값 -> 함수를 소유하는 객체
+        객체에서 사용되는 this의 값 -> 객체 자체를 의미 
+        객체 생성자의 this -> 값이 없음 -->
+  
+  <!-- JS는 객체에 대한 생성자가 존재 -> JS 내장 객체로 정의되어 있음 
+        var x1 = new Object();
+        var x1 = new String();
+        var x1 = new Number();
+        var x1 = new Boolean();
+        var x1 = new Array(); 
+        var x1 = new RegExp(); 
+        var x1 = new Function(); 
+        var x1 = new Date(); !-->
+
+  <!-- 객체 맴버 -> 객체에 정의된 속성과 메소드 -->
+
+  <!-- JS는 기존 객체에 속성과 메소드를 추가 가능 
+        단순 변경이 아닌 생성자를 이용한 새롭게 정의가 가능 -->
+  <script>
+    function Car(model, speed, color) {
+      this.model = model;
+      this.speed = speed;
+      this.color = color;
+      
+      this.break = function () {
+        this.speed -= 10;
+      };
+      this.accel = function () {
+        this.speed += 10;
+      }
+
+    }
+
+    myCar = new Car("BMW", 100, "White");
+    delete myCar.color;
+    document.write(`내 차의 색상 : ${myCar.color}`);
+  </script>
+</body>
+</html>
