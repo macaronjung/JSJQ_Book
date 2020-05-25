@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="demo01"></p>
+  <p id="demo02"></p>
+
+  <!-- 이스케이프 문자 활용 -->
+  <script> 
+    var x = "It\'s alright";
+    var y = "We are the so-called \"Vikings\"";
+    document.getElementById("demo01").innerHTML = x + "<br />";
+    document.getElementById("demo02").innerHTML = y + "<br />";
+
+  // \' \" : 따옴표
+  // \\ : 백 슬래쉬
+  // \b : 백스페이스
+  // \r : 줄바꿈
+  </script>
+</body>
+</html>

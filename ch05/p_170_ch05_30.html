@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <!-- Sting 과 Object 의 비교 -->
+  <!-- 프로그램 실행 속도를 고려한다면 문자열 객체 사용을 지양 -->
+  <!-- 문자열에 대한 작업이 요구된다면 객체로 정의해야 함 -->
+
+  <p id="demo01"></p>
+  <p id="demo02"></p>
+
+  <script>
+    var x = "Mozilla"; // 리터럴 선언
+    var y = new String("Mozilla"); // 객체 선언
+    document.getElementById("demo01").innerHTML = (x == y);
+    document.getElementById("demo02").innerHTML = (x === y);
+  </script>
+</body>
+</html>
