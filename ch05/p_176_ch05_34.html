@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <!-- replace() -> 지정된 값을 문자열의 다른 값으로 바꿈 -->
+  <!-- 호출된 문자열(기존의 문자열)을 바꾸는 것이 아니라 새로운 문자열을 반환 -->
+  <!-- 기본적으로 첫 번째 일치된 항목만 바꿈 -->
+
+  <button onclick="myFunction()">Try~!~!</button>
+  <p id="demo01"></p>
+  <p id="demo02"></p>
+
+  <script>
+    function myFunction() {
+      var str = "Javascript Java";
+      var txt = str.replace("java", "C#");
+      document.getElementById("demo01").innerHTML = txt;
+    }
+  </script>
+</body>
+</html>
