@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form>
+    <div class="1_number">
+      1 : <input id="first" />
+    </div>
+    <div class="2_number">
+      2 : <input id="second" />
+    </div>
+    <div class="3_number">
+      3 : <input id="third" />
+    </div>
+    <div class="4_number">
+      4 : <input id="forth" />
+    </div>
+    <div class="5_button">
+      <button onclick="createNumber()">
+        CREAT
+      </button>
+      <button onclick="searchNumber()">
+        SEARCH
+      </button>
+    </div>
+  </form>
+
+  <script>
+    const arrayNumber = new Array(3);
+    const strikeCount = 0;
+    const ballCount = 0;
+    const count = 0;
+    const text = "";
+
+    function creatNumber() {
+      for(let i=0; i<=3; i++) {
+        first = Math.floor((Math.random()) * 10);
+        arrayNumber[i] = first;
+
+        for(let j=0; j<i; j++) {
+          if(arrayNumber[j] === arrayNumber[i]) {
+            i--;
+            break;
+          } 
+        }
+      }
+
+      document.getElementById("first") = arrayNumber[0];
+      document.getElementById("second") = arrayNumber[1];
+      document.getElementById("third") = arrayNumber[2];
+      document.getElementById("forth") = arrayNumber[3];
+    }
+
+    function searchNumber() {
+      strikeCount = 0;
+      ballCount = 0;
+
+      inputFirst = document.getElementById("first");
+      inputSecond = document.getElementById("second");
+      inputThird = document.getElementById("third");
+      inputForth = document.getElementById("forth");
+
+      const inputNumber = new Array(inputFirst, inputSecond, inputThird, inputForth);
+
+      for(let i=0; i<=3; i++) {
+        for(let j=0; j<=3; j++) {
+          if(inputNumber === arrayNumber[j] && i === j)
+            strikeCount++;
+            else if(inputNumber[i] === arrayNumber[j])
+            ballCount++;
+        }
+      }
+
+      count++;
+
+      document.getElementById("strike") = strikeCount;
+      document.getElementById("ball") = ballCount;
+      document.getElementById("count") = count;
+
+      text += `입력${count} : ${inputNumber} Strike : ${strikeCount} Ball : ${ballCount} <br />`;
+
+    }
+  </script>
+</body>
+</html>
